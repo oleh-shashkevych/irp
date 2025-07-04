@@ -226,4 +226,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     // --- КОНЕЦ: Код для кастомного попапа в галерее ---
+
+    // --- НАЧАЛО: Код для бургер-меню ---
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    if (burgerMenu && mobileMenu) {
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            body.classList.toggle('body-no-scroll');
+        });
+    }
+    // --- КОНЕЦ: Код для бургер-меню ---
 });
